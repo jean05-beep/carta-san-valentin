@@ -1,0 +1,92 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffe6f0;
+    color: #d3006c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+}
+
+/* Estilo de la imagen (carta) */
+.card-image {
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-image:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo para la carta */
+.content {
+    display: none;
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Título */
+h1 {
+    color: #ff0066;
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Corazones */
+.heart {
+    color: #ff0066;
+    font-size: 50px;
+    margin: 20px 0;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
